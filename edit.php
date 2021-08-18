@@ -30,34 +30,40 @@ if(!empty($_GET['id'])) {
 </head>
 <body>
     <header>
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="index.php"><img src="assets/img/home.png" /></a>
-                        <ul>
-                            <li class="submenu">Home</li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+        <div class="container-menu" >
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="index.php"><img src="assets/img/home.png" /></a>
+                            <ul>
+                                <li class="submenu">Home</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <div class="container">
-        <h1>Edit</h1>
+        <div class="form" >
+            <div class="container-form">
+                <h1>Edit</h1>
 
-        <form method="POST" action="edit_submit.php" >
-            <input type="hidden" name="id" value="<?php echo $info['id']; ?>" />
-            
-            <label>Name:
-            <input type="text" name="name" value="<?php echo $info['name']; ?>" autofocus autocomplete="off"/>
-            </label>
+                <form method="POST" action="edit_submit.php" >
+                    <input type="hidden" name="id" value="<?php echo $info['id']; ?>" />
+                    
+                    <label>Name:
+                    <input type="text" name="name" value="<?php echo $info['name']; ?>" autofocus autocomplete="off"/>
+                    </label>
 
-            <label>E-mail:
-            <input type="email" name="email" value="<?php echo $info['email']; ?>" />
-            </label>
+                    <label>E-mail:
+                    <input type="email" name="email" value="<?php echo $info['email']; ?>" />
+                    </label>
 
-            <input type="submit" value="Save" />
-        </form>
+                    <input type="submit" value="Save" />
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>

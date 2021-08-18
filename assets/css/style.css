@@ -1,18 +1,23 @@
 * {
     font-family: 'Georama', sans-serif;
-    font-size: 17px;
+    font-size: 20px;
 }
 body {
     margin: 0;
     padding: 0;
 }
+.container-menu {
+    display: flex;
+    float: left;
+    width: 15%;
+    align-items: center;
+    height: 931px;
+}
 .menu {
     display: flex;
     justify-content: start;
     padding: 10px;
-    padding-top: 400px;
     float: left;
-    width: 235px;
 }
 .submenu {
     color: #272829;
@@ -44,8 +49,6 @@ ul li a {
 	background: #fff;
 	border-bottom: 0;
     color: #272829;
-    border: 2px solid #272829;
-    border-radius: 50px;
     padding: 5px;
     align-content: center;
 }
@@ -65,8 +68,8 @@ img {
     align-content: center;
 }
 #img-edit, #img-delete {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     border: 0;
     border-radius: 0;
     margin-right: 10px;
@@ -76,16 +79,18 @@ img {
 }
 h1 {
     color:#333;
-    font-size: 30px;
+    font-size: 40px;
 }
 table {
-    width: 700px;
+    width: 90%;
     background: #FFF;
     text-align: start;
-    align-content: center;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 30px;
+}
+.table, .form {
+    width: 90%;
+    display: block;
+    float: left;
+    padding-left: 10%;
 }
 th {
     background-color: #323047;
@@ -99,10 +104,17 @@ tbody tr:hover {
 }
 .container {
     text-align: center;
-    margin-left: 450px;
-    margin-top: 50px;
-    width: 900px;
-    align-content: center;
+    width: 85%;
+    display: block;
+    float: left;
+}
+.container-form {
+    background-color: #F0FFFF;
+    border: 2px solid #E0EEEE;
+    width: 50%;
+    margin-top: 15%;
+    padding: 5%;
+    margin-left: 10%;
 }
 tbody tr:nth-child(even) {
     background-color: #eee;
@@ -114,8 +126,10 @@ label {
 input {
     padding: 10px;
     width: 300px;
-    font-size: 17px;
+    font-size: 20px;
 }
 input[type=submit] {
-    width: 120px;
+    width: 125px;
+    background-color: #1E90FF;
+    border: none;
 }

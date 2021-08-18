@@ -16,46 +16,50 @@ $contact = new Contact();
 </head>
 <body>
     <header>
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a href="add.php"><img src="assets/img/add-contact.png" /></a>
-                        <ul>
-                            <li class="submenu">Add new contact</li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+        <div class="container-menu" >
+            <div class="menu">
+                <nav>
+                    <ul>
+                        <li><a href="add.php"><img src="assets/img/add-contact.png" /></a>
+                            <ul>
+                                <li class="submenu">Add new contact</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <div class="container">
         <h1>Contacts</h1>
 
-        <table>
-            <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>E-mail</th>
-                <th>Actions</th>
-            </tr>
+        <div class="table" >
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>E-mail</th>
+                    <th>Actions</th>
+                </tr>
 
-            <?php
-                $list = $contact->getAll();
-                foreach($list as $item):
-            ?>
+                <?php
+                    $list = $contact->getAll();
+                    foreach($list as $item):
+                ?>
 
-            <tr>
-                <td><?php echo $item['id']; ?></td>
-                <td><?php echo $item['name']; ?></td>
-                <td><?php echo $item['email']; ?></td>
-                <td class="actions">
-                    <a href="edit.php?id=<?php echo $item['id']; ?>"><img id="img-edit" src="assets/img/edit.png"></a>
-                    <a href="delete.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Are you sure you want to delete this item?')" ><img id="img-delete" src="assets/img/trash.png"></a>
-                </td>
-            </tr>
+                <tr>
+                    <td><?php echo $item['id']; ?></td>
+                    <td><?php echo $item['name']; ?></td>
+                    <td><?php echo $item['email']; ?></td>
+                    <td class="actions">
+                        <a href="edit.php?id=<?php echo $item['id']; ?>"><img id="img-edit" src="assets/img/edit.png"></a>
+                        <a href="delete.php?id=<?php echo $item['id']; ?>"onclick="return confirm('Are you sure you want to delete this item?')" ><img id="img-delete" src="assets/img/trash.png"></a>
+                    </td>
+                </tr>
 
-            <?php endforeach; ?>
-        </table>
+                <?php endforeach; ?>
+            </table>
+        </div>
     </div>
 </body>
 </html>
