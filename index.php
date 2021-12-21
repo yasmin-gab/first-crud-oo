@@ -53,7 +53,7 @@ $contact = new Contact();
                     <td><?php echo $item['email']; ?></td>
                     <td class="actions">
                         <a href="edit.php?id=<?php echo $item['id']; ?>"><img id="img-edit" src="assets/img/edit.png"></a>
-                        <a href="delete.php?id=<?php echo $item['id']; ?>"onclick="return confirm('Are you sure you want to delete this item?')" ><img id="img-delete" src="assets/img/trash.png"></a>
+                        <a href="delete.php?id=<?php echo $item['id']; ?>" onclick="return confirm('Are you sure you want to delete this item?')" ><img id="img-delete" src="assets/img/trash.png"></a>
                     </td>
                 </tr>
 

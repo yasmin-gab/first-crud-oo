@@ -54,8 +54,9 @@ class Contact {
             $sql->bindValue(':email', $email);
             $sql->bindValue(':id', $id);
             $sql->execute();
-
+            
             return true;
+            
         } else {
             return false;
         }
